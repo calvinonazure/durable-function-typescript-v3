@@ -1,0 +1,20 @@
+{
+  "bindings": [
+    {
+      "type": "eventHubTrigger",
+      "name": "eventHubMessages",
+      "direction": "in",
+      "eventHubName": "samples-workitems",
+      "connection": "myeh0616_RootManageSharedAccessKey_EVENTHUB",
+      "cardinality": "many",
+      "consumerGroup": "$Default",
+      "dataType": "string"
+    },
+    {
+      "name": "ehstarter",
+      "type": "orchestrationClient",
+      "direction": "in"
+  }
+  ],
+  "scriptFile": "../dist/EventHubTrigger1/index.js"
+}
